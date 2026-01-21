@@ -13,7 +13,7 @@ function App() {
   // - Update the `joke` state with the fetched joke
   // - Set `loading` to false once the joke is loaded
   // - Handle any errors in the `.catch` block
-  
+
   // Step 2: Create a function to fetch a new joke
   const fetchJoke = () => {
     setLoading(true);
@@ -37,7 +37,7 @@ function App() {
     <div className="app">
       <h1>Programming Jokes</h1>
       {/* Step 4: Pass the necessary props to JokeDisplay */}
-      <JokeDisplay joke={joke} loading={loading} />
+      <JokeDisplay joke={joke} loading={loading} error={error} />
       {/* Step 5: Pass the function to FetchButton so it can fetch a new joke on click */}
       <FetchButton fetchJoke={fetchJoke}/>
     </div>
